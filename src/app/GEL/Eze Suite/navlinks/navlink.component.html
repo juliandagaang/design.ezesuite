@@ -1,0 +1,340 @@
+<div class="content-area">
+  <div class="content-body">
+    <ul class="grid-column gap-xl">
+      <li class="display-lg ">
+        Navigations
+      </li>
+
+      <li>
+        <h2>Menus</h2>
+        <p>
+          Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
+          risus.
+        </p>
+        <ilo>
+          <ilo-head>
+            <header class="grid-autofit">
+              <div class=" menu-panel ">
+                <!--
+                  <a class="d-none d-sm-block d-lg-none grid grid-itm-middle ">
+                  <button btnmajorlarge>
+                    <i class="fas fa-bars"></i>
+                  </button>
+                </a>
+                -->
+                <a
+                  (click)="viewMode = 'apple'"
+                  [class.active]="viewMode == 'apple'"
+                  class="menu-item"
+                >
+                  <div>Apple</div>
+                </a>
+
+                <a
+                  (click)="viewMode = 'papaya'"
+                  [class.active]="viewMode == 'papaya'"
+                  class="menu-item"
+                >
+                  Papaya
+                </a>
+
+                <div class="dropdown-ctn">
+                  <a
+                    [class.active]="viewMode == 'orange' || viewMode == 'lemon'"
+                    class="menu-item "
+                    (click)="citrus = !citrus"
+                  >
+                    Citrus <i class="ml1 fas fa-caret-down"></i>
+                  </a>
+                  <div *ngIf="citrus" class="dropdown-panel">
+                    <a
+                      class="dropdown-item"
+                      [class.active]="viewMode == 'orange'"
+                      (click)="viewMode = 'orange' ; citrus = !citrus"
+                      >Orange</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      [class.active]="viewMode == 'lemon'"
+                      (click)="viewMode = 'lemon';citrus = !citrus"
+                      >Lemon</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <div class="p4" [ngSwitch]="viewMode">
+              <div *ngSwitchCase="'apple'"><h1>Apple</h1></div>
+              <div *ngSwitchCase="'papaya'"><h1>Papaya</h1></div>
+              <div *ngSwitchCase="'orange'"><h1>Orange</h1></div>
+              <div *ngSwitchCase="'lemon'"><h1>Lemon</h1></div>
+            </div>
+          </ilo-head>
+          <ilo-foot>
+            <cd param="header" paramend="header">
+              <div class="ml3">
+                <cd param='div class=" nav-ctn "' paramend="div">
+                  <div class="ml3">
+                    <cd
+                      param='a routerLink="..." routerLinkActive="active" class="nav-link"'
+                      paramend="a"
+                    >
+                      Apple
+                    </cd>
+                    <cd
+                      param='a routerLink="..." routerLinkActive="active" class="nav-link"'
+                      paramend="a"
+                    >
+                      Orange
+                    </cd>
+                  </div>
+                </cd>
+              </div>
+            </cd>
+          </ilo-foot>
+        </ilo>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <h2>Drawer</h2>
+        <p>
+          Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
+          risus.
+        </p>
+        <ilo>
+          <ilo-head>
+            <div class="grid">
+              <div class="grid-md-3 grid-sm-12">
+                <sidescroll>
+                  <sidepanel title="Animals">
+                    <a
+                      class="drawer-item"
+                      (click)="viewSide = 'monkey'"
+                      [class.active]="viewSide == 'monkey'"
+                      title="Monkey"
+                    >
+                      Monkey
+                    </a>
+                    <a
+                      class="drawer-item"
+                      (click)="viewSide = 'eagle'"
+                      [class.active]="viewSide == 'eagle'"
+                      title="Eagle"
+                    >
+                      Eagle
+                    </a>
+                  </sidepanel>
+                </sidescroll>
+              </div>
+              <div class="grid-md-9 grid-sm-12">
+                <div class="content-body">
+                  <div [ngSwitch]="viewSide">
+                    <div *ngSwitchCase="'monkey'"><h1>Monkey</h1></div>
+                    <div *ngSwitchCase="'eagle'"><h1>Eagle</h1></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ilo-head>
+          <ilo-foot>
+            <cd param="sidescroll" paramend="sidescroll">
+              <div class="ml3">
+                <cd param='sidepanel title="Animals"' paramend="sidepanel">
+                  <div class="ml3">
+                    <cd
+                      param='a class="side-item" routerLink="..." routerLinkActive="active" title="Monkey"'
+                      paramend="a"
+                    >
+                    </cd>
+                    <cd
+                      param='a class="side-item" routerLink="..." routerLinkActive="active" title="Eagle"'
+                      paramend="a"
+                    >
+                    </cd>
+                  </div>
+                </cd>
+              </div>
+            </cd>
+          </ilo-foot>
+        </ilo>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <h2>Tabs</h2>
+        <p>
+          Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
+          risus.
+        </p>
+        <ilo>
+          <ilo-head>
+            <div class="tab-panel">
+              <a
+                class="tab-item"
+                [class.active]="viewTab == 'sampaguita'"
+                (click)="viewTab = 'sampaguita'"
+              >
+                Sampaguita
+              </a>
+              <a
+                class="tab-item"
+                [class.active]="viewTab == 'sunflower'"
+                (click)="viewTab = 'sunflower'"
+              >
+                Sunflower
+              </a>
+            </div>
+
+            <div class="p4" [ngSwitch]="viewTab">
+              <div *ngSwitchCase="'sampaguita'"><h1>Sampaguita</h1></div>
+              <div *ngSwitchCase="'sunflower'"><h1>Sunflower</h1></div>
+            </div>
+          </ilo-head>
+          <ilo-foot>
+            <cd param='div class="ez-tab"' paramend="div">
+              <div class="ml3">
+                <cd
+                  param='a class="tab-link" [class.active]="..." (click)="..." '
+                  paramend="a"
+                  >Sampaguita</cd
+                >
+              </div>
+              <div class="ml3">
+                <cd
+                  param='a class="tab-link" [class.active]="..." (click)="..."'
+                  paramend="a"
+                  >Sunflower</cd
+                >
+              </div>
+            </cd>
+          </ilo-foot>
+        </ilo>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <h2>Breadcrumbs (WIP)</h2>
+        <p>
+          Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
+          risus.
+        </p>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <h2>Pagination (New)</h2>
+        <p>
+          Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
+          risus.
+        </p>
+        <ilo>
+          <ilo-head>
+            <div class=" pgn-panel">
+              <a class="pgn-item active">1</a>
+              <a class="pgn-item">2</a>
+              <a class="pgn-item">3</a>
+              <a class="pgn-item">4</a>
+              <a class="pgn-item">5</a>
+            </div>
+            <div class="mt1 pgn-panel">
+              <a class="pgn-item active">1</a>
+              <a class="pgn-item">2</a>
+              <a class="pgn-item">3</a>
+              <a class="pgn-item">4</a>
+              <a class="pgn-item">5</a>
+              <a disabled class="pgn-item"
+                ><span class="text-subtle">...</span></a
+              >
+              <a class="pgn-item">20</a>
+              <a class="pgn-item "><i class="fas fa-angle-right"></i></a>
+            </div>
+            <div class=" pgn-panel mt1">
+              <a class="pgn-item "><i class="fas fa-angle-left"></i></a>
+              <a class="pgn-item">1</a>
+              <a disabled class="pgn-item"
+                ><span class="text-subtle">...</span></a
+              >
+              <a class="pgn-item active">11</a>
+              <a class="pgn-item ">12</a>
+
+              <a class="pgn-item">13</a>
+              <a class="pgn-item">14</a>
+              <a class="pgn-item">15</a>
+              <a disabled class="pgn-item"
+                ><span class="text-subtle">...</span></a
+              >
+              <a class="pgn-item">20</a>
+              <a class="pgn-item "><i class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="mt1 pgn-panel">
+              <a class="pgn-item "><i class="fas fa-angle-left"></i></a>
+              <a class="pgn-item">1</a>
+              <a disabled class="pgn-item"
+                ><span class="text-subtle">...</span></a
+              >
+              <a class="pgn-item active">16</a>
+              <a class="pgn-item ">17</a>
+
+              <a class="pgn-item">18</a>
+              <a class="pgn-item">19</a>
+              <a class="pgn-item">20</a>
+            </div>
+          </ilo-head>
+        </ilo>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <h2>Application picker (New)</h2>
+        <p>
+          Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
+          risus.
+        </p>
+        <ilo>
+          <ilo-head>
+            <header class="grid-autofit ">
+              <div class="grid-end">
+                <div class="dropdown-ctn  grid-middle">
+                  <div class=" mr3">
+                    <h3 class="m0">Lennie Babalcon</h3>
+                    <div class="text-subtle text-small">Branch Manager</div>
+                  </div>
+
+                  <a class="picker" (click)="pick = !pick">
+                    <i class="fab fa-sketch"></i>
+                  </a>
+                  <div *ngIf="pick" class="dropdown-panel dropend">
+                    <div (click)="pick = !pick" class="grid-column gap-sm">
+                      <a class="dropdown-item">
+                        <span style="font-size:24px" class="mr3">
+                          <i class="fas fa-rocket"></i>
+                        </span>
+                        <span>
+                          Admin Portal
+                        </span>
+                      </a>
+
+                      <a class="dropdown-item active">
+                        <span style="font-size:24px" class="mr3">
+                          <i class="fas fa-rocket"></i>
+                        </span>
+                        <span>
+                          Admin Portal
+                        </span>
+                      </a>
+                      <div class="divider"></div>
+                      <div class="px4">
+                        <p class="text-link m0">Logout</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </ilo-head>
+        </ilo>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <iframe src="https://codesandbox.io/embed/engagis-gel-v10-enkq3?fontsize=14&module=%2Fsrc%2Fapp%2FGEL%2FEze%20Suite%2Fnavlinks%2Fnavlink.component.html&view=editor" title="Engagis GEL V1.0" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+      </li>
+    </ul>
+  </div>
+</div>

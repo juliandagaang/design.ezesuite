@@ -1,0 +1,126 @@
+<div class="content-area">
+  <div class="content-head grid-autofit grid-middle gap-sm-rp">
+  <div class="grid-start grid-middle gap-xs">
+  <button btnbasiclarge routerLink="/ezesuite/tablebasic"><i class="fas fa-arrow-left"></i></button>
+    <h1>Trash</h1>
+  </div>
+  
+
+    <div class="text-link grid-end  gap-sm-rp">
+      
+      <button routerLink="/ezesuite/tablebasic" btnbasiclarge>
+        <i class="far fa-trash-alt"></i>
+        <div class="text-small ">Empty all</div>
+      </button>
+      
+    </div>
+  </div>
+  <div class="content-body">
+    <div class="grid grid-middle gap-sm-rp">
+      <div class="input-panel grid-sm-12 grid-md-4 grid-lg-2">
+        <label class="input-head" for="sample">Filter 1</label>
+        <select class="input-field">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div class="input-panel grid-sm-12 grid-md-4 grid-lg-2">
+        <label class="input-head" for="sample">Filter 2</label>
+        <select class="input-field">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div
+        class=" grid-end gap-lg rp-left grid-middle grid-sm-12 grid-md-4 grid-lg-8"
+      >
+        
+        
+        <div class=" grid-column text-center">
+          <div class="flex-middle flex-center">
+            <h2 class="m0"><i class="mr1 fas fa-vector-square"></i></h2>
+            <h1 class=" m0">
+              5
+            </h1>
+          </div>
+
+          <p class="text-small m0">Trash items</p>
+        </div>
+      </div>
+    </div>
+    <div class="table-ctn">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <label class="input-check  ">
+                <input type="checkbox" id="check" />
+                <span class=" checkmark"></span>
+              </label>
+            </th>
+            <th>
+              <a>Name <i class="ml1 opacity-50 fas fa-arrows-alt-v"></i></a>
+            </th>
+            <th>
+              <a>Company <i class="ml1 opacity-50 fas fa-arrows-alt-v"></i></a>
+            </th>
+            <th><a>Email <i class="ml1 opacity-50 fas fa-arrows-alt-v"></i></a></th>
+            <th><a>Contact <i class="ml1 opacity-50 fas fa-arrows-alt-v"></i></a></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label class="input-check  ">
+                <input
+                  routerLink="/ezesuite/tablecontext"
+                  type="checkbox"
+                  id="check"
+                />
+                <span class=" checkmark"></span>
+              </label>
+            </td>
+            <td>
+              <span class="text-link ">
+                Anne Curtis
+              </span>
+            </td>
+
+            <td>ABS-CBN</td>
+            <td>anne.curtis@gmail.com</td>
+            <td>(06) 3711 0054</td>
+            <td class="text-right">
+            <button btnbasicsmall><i class="fas fa-ellipsis-h"></i></button>
+              
+            </td>
+          </tr>
+          <tr *ngFor="let users of users">
+            <td>
+              <label class="input-check  ">
+                <input type="checkbox" id="check" />
+                <span class=" checkmark"></span>
+              </label>
+            </td>
+            <td>
+              <span class="text-link ">
+                {{users.Name}}
+              </span>
+            </td>
+            <td>{{users.Role}}</td>
+            <td>{{users.Email}}</td>
+            <td>{{users.Contact}}</td>
+            <td class="text-right">
+              <button btnbasicsmall><i class="fas fa-ellipsis-h"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+</div>

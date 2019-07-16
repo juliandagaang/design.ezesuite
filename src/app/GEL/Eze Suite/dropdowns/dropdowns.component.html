@@ -1,0 +1,226 @@
+<div class="content-area">
+  <div class="content-body">
+    <ul class="grid-column gap-xl">
+      <li>
+        <div class="display-lg">
+          Dropdowns
+        </div>
+      </li>
+      <li>
+        <h2>Application picker</h2>
+        <p>
+          Vivamus magna justo, lacinia eget consectetur sed, convallis at
+          tellus.
+        </p>
+        <ilo>
+          <ilo-head>
+            <header class="grid-autofit ">
+              <div class="grid-end">
+                <div class="dropdown-ctn  grid-middle">
+                  <div class=" mr3">
+                    <h3 class="m0">Lennie Babalcon</h3>
+                    <div class="text-subtle text-small">Branch Manager</div>
+                  </div>
+
+                  <a class="picker" (click)="pick = !pick">
+                    <i class="fab fa-sketch"></i>
+                  </a>
+                  <div *ngIf="pick" class="dropdown-panel dropend">
+                    <div (click)="pick = !pick" class="grid-column gap-sm">
+                      <a class="dropdown-item">
+                        <span style="font-size:24px" class="mr3">
+                          <i class="fas fa-rocket"></i>
+                        </span>
+                        <span>
+                          Admin Portal
+                        </span>
+                      </a>
+
+                      <a class="dropdown-item active">
+                        <span style="font-size:24px" class="mr3">
+                          <i class="fas fa-rocket"></i>
+                        </span>
+                        <span>
+                          Admin Portal
+                        </span>
+                      </a>
+                      <div class="divider"></div>
+                      <div class="px4">
+                        <p class="text-link m0">Logout</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </ilo-head>
+        </ilo>
+      </li>
+      <li>
+        <h2>Button (Beta)</h2>
+        <p>
+          Vivamus magna justo, lacinia eget consectetur sed, convallis at
+          tellus.
+        </p>
+        <ilo>
+          <ilo-head>
+            <div class="grid-ctn-start grid-itm-middle gap-sm ">
+              <div class="dropdown-ctn">
+                <button (click)="filter = !filter" btnbasic>
+                  User roles (2) <i class=" fas fa-angle-down"></i>
+                </button>
+                <div *ngIf="filter" class="dropdown-panel ">
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >All
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >Branch manager
+                      <input checked type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >Marketing manager
+                      <input checked type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >Marketing manager
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ilo-head>
+        </ilo>
+      </li>
+      <li>
+        <h2>Form inputs (Beta)</h2>
+        <p>
+          Vivamus magna justo, lacinia eget consectetur sed, convallis at
+          tellus.
+        </p>
+        <ilo>
+          <ilo-head>
+            <div class="grid-autofit gap-sm-rp">
+              <div class="dropdown-ctn">
+                <div (click)="filter2 = !filter2" class="input-panel p0">
+                  <label class="input-head" for="sample">With search</label>
+                  <input class="input-field" />
+                </div>
+                <div *ngIf="filter2" class="dropdown-panel  ">
+                  <div class="dropdown-item">
+                    <div class="input-panel p0">
+                      <div class="flex">
+                        <div class="input-img flex-middle text-subtle">
+                          <p><i class="fas fa-search"></i></p>
+                        </div>
+                        <input
+                          placeholder="Search"
+                          type="text"
+                          class="input-field"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >All
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >Branch manager
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >Marketing manager
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >Marketing manager
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class=" dropdown-ctn">
+                <div (click)="filter2 = !filter2" class="input-panel p0">
+                  <label class="input-head" for="sample">Without search</label>
+                  <input class="input-field" />
+                </div>
+                <div *ngIf="filter2" class="dropdown-panel  ">
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >All
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >Branch manager
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >Marketing manager
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="dropdown-item ">
+                    <label class="input-check "
+                      >Marketing manager
+                      <input type="checkbox" id="check" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class=" dropdown-ctn">
+                <div (click)="filter2 = !filter2" class="input-panel p0">
+                  <label class="input-head" for="sample"
+                    >In-search (Single-select)</label
+                  >
+                  <input class="input-field" value="Ora" />
+                </div>
+                <div *ngIf="filter2" class="dropdown-panel  ">
+                  <div class="dropdown-item ">
+                    Orange
+                  </div>
+
+                  <div class="dropdown-item ">
+                    Orange and lemon
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ilo-head>
+        </ilo>
+      </li>
+    </ul>
+  </div>
+</div>

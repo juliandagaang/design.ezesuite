@@ -1,0 +1,54 @@
+<div class="sidebrand flex-middle ">
+  <div>
+    <h1>Engagis GEL</h1>
+    <p>Digital products</p>
+  </div>
+</div>
+<!---->
+
+<sidescroll>
+  <!--
+    <sidepanel title="Get started">
+    <a
+      class="side-item"
+      routerLinkActive="active"
+      [routerLink]="intro.routePath"
+      *ngFor="let intro of intro"
+    >
+      {{intro.name}}
+    </a>
+  </sidepanel>
+  -->
+
+  <sidepanel title="Primitives">
+    <a
+      class="drawer-item"
+      routerLinkActive="active"
+      [routerLink]="primitive.routePath"
+      *ngFor="let primitive of primitive"
+    >
+      {{primitive.name}}
+    </a>
+  </sidepanel>
+
+  <sidepanel title="Components">
+    <a
+      class="drawer-item"
+      routerLinkActive="active"
+      [routerLink]="component.routePath"
+      *ngFor="let component of component"
+    >
+      {{component.name}}
+    </a>
+  </sidepanel>
+  <sidepanel title="Templates">
+    <a
+      class="drawer-item"
+      routerLinkActive="active"
+      [routerLink]="template.routePath"
+      *ngFor="let template of template"
+    >
+      {{template.name}}
+    </a>
+  </sidepanel>
+</sidescroll>

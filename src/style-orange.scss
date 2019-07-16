@@ -1,0 +1,154 @@
+@import './skin.scss';
+
+.menu-item:hover{
+  color:$ez-orange;
+}
+.menu-item.active{
+  color:$ez-orange;
+}
+
+
+
+.dropdown-item:hover{
+  color:$ez-orange;
+}
+
+.dropdown-item.active{
+  color:$ez-orange;
+}
+
+
+.drawer-item:hover{
+  color: $ez-orange;
+}
+
+.drawer-item:hover,.drawer-item.active{
+  color: $ez-orange;
+}
+
+.sidebrand{
+  background: $ez-orange !important;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.btn-primary{
+  background-color:$ez-orange !important;
+  border:solid thin $ez-orange;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%) !important;
+ }
+
+
+ .ez-btn:hover {  
+  color:$ez-dark-orange !important;
+}
+
+ .btn-primary:hover{
+  background-color:$ez-dark-orange !important;
+  color:white !important;
+ }
+
+ .btn-menu:hover{
+  color:$ez-dark-orange !important;
+ }
+
+ .btn-menu:hover .btn-basic{
+  color:$ez-dark-orange ;
+ }
+
+ .btn-menu:hover  .btn-primary{
+  background-color:$ez-dark-orange !important;
+ }
+
+ 
+ .btn-secondary{
+  color:$ez-orange !important;
+  border:solid thin $ez-orange !important;
+}
+
+.ot,.ct{
+  color:$ez-orange;
+}
+
+.tab-item:hover{
+  color: $ez-orange;
+
+}
+
+.tab-item.active{
+  border-color: $ez-orange;
+
+}
+
+.checkmark:after {
+
+  color: $ez-orange;
+
+}
+
+.radiomark:after {
+  
+
+  color: $ez-orange;
+
+}
+/*On mouse-over, add a grey background color */
+.input-check:hover input ~ .checkmark {
+
+  outline:solid 1px $ez-orange;
+}
+
+/* On mouse-over, add a grey background color */
+.input-check:hover input ~ .radiomark {
+  border:solid 1px $ez-orange;
+  border-radius:50%;
+
+}
+
+.input-field:focus{
+  border: solid 1px $ez-orange !important;
+outline:none;
+}
+
+.text-link{
+  color: $ez-link-orange;
+}
+.text-link:hover{
+  color:$ez-dark-orange;
+}
+
+.table-ctn th{
+  background: $ez-orange;
+  border:solid thin $ez-orange;
+}
+
+.table-ctn .selected{
+  background: $ez-light-orange;
+  border:solid thin $ez-orange;
+}
+.table-ctn .selected:hover{
+  background: $ez-light-orange;
+  border:solid thin $ez-orange;
+}
+
+.pgn-panel .active{
+  background:$ez-orange;
+  border: solid thin $ez-orange !important;
+  color: white;
+}
+
+.picker{
+  color:$ez-orange;
+}
+
+/* Show the checkmark when checked */
+.input-check input:checked ~ .checkmark {
+  border: solid 1px $ez-orange !important;
+}
+
+.input-check input:checked ~ .radiomark {
+  border: solid 1px $ez-orange !important;
+}
+
+.pgn-item{
+  color: $ez-orange;
+}

@@ -1,0 +1,156 @@
+@import './skin.scss';
+
+.menu-item:hover{
+  color:$ez-primary;
+}
+.menu-item.active{
+  color:$ez-primary;
+}
+
+
+
+.dropdown-item:hover{
+  color:$ez-primary;
+}
+
+.dropdown-item.active{
+  color:$ez-primary;
+}
+
+
+.drawer-item:hover{
+  color: $ez-primary;
+}
+
+.drawer-item:hover,.drawer-item.active{
+  color: $ez-primary;
+}
+
+.sidebrand{
+  background: $ez-primary !important;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.btn-primary{
+  background-color:$ez-primary !important;
+  border:solid thin $ez-primary;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%) !important;
+ }
+
+
+
+ .ez-btn:hover {  
+  color:$ez-dark !important;
+}
+
+ .btn-primary:hover{
+  background-color:$ez-dark !important;
+  color:white !important;
+ }
+
+ .btn-menu:hover{
+  color:$ez-dark !important;
+ }
+
+ .btn-menu:hover .btn-basic{
+  color:$ez-dark ;
+ }
+
+ .btn-menu:hover  .btn-primary{
+  background-color:$ez-dark !important;
+ }
+
+ 
+ .btn-secondary{
+  color:$ez-primary !important;
+  border:solid thin $ez-primary !important;
+}
+
+.ot,.ct{
+  color:$ez-primary;
+}
+
+.tab-item:hover{
+  color: $ez-primary;
+
+}
+
+.tab-item.active{
+  border-color: $ez-primary;
+
+}
+
+.checkmark:after {
+
+  color: $ez-primary;
+
+}
+
+.radiomark:after {
+  
+
+  color: $ez-primary;
+
+}
+/*On mouse-over, add a grey background color */
+.input-check:hover input ~ .checkmark {
+
+  border:solid thin  $ez-primary;
+}
+
+/* On mouse-over, add a grey background color */
+.input-check:hover input ~ .radiomark {
+  border:solid thin $ez-primary;
+  border-radius:50%;
+
+}
+
+.input-field:focus{
+  border: solid thin $ez-primary !important;
+outline:none;
+}
+
+.text-link{
+  color: $ez-dark;
+}
+
+.text-major{
+  color:$ez-dark;
+}
+.text-link:hover{
+  color:$ez-dark;
+}
+
+.table-ctn th{
+  background: $ez-primary;
+  border:solid thin $ez-primary;
+  border-bottom: solid 3px $ez-dark;
+}
+
+.table-ctn .selected{
+  background: $ez-light;
+  border:solid thin $ez-primary;
+}
+.table-ctn .selected:hover{
+  background: $ez-light;
+  border:solid thin $ez-primary;
+}
+
+.pgn-panel .active{
+  background:$ez-primary;
+  border: solid thin $ez-primary !important;
+  color: white;
+}
+
+.picker{
+  color:$ez-primary;
+}
+
+/* Show the checkmark when checked */
+.input-check input:checked ~ .checkmark {
+  border: solid thin $ez-primary !important;
+}
+
+.input-check input:checked ~ .radiomark {
+  border: solid thin $ez-primary !important;
+}

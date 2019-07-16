@@ -1,0 +1,80 @@
+.table-ctn{
+  width:100%;
+  margin-top: 16px;
+  //width: auto;
+  //flex: 1;
+  //display: grid;
+
+  /* These are just initial values which are overriden using JavaScript when a column is resized */
+  /*grid-template-columns: 
+    minmax(150px, 1fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)*/
+}
+
+.table-ctn table{
+    width:100%;
+  border-collapse: collapse;
+
+}
+
+
+
+.table-ctn thead,
+.table-ctn tbody,
+.table-ctn tr {
+
+  //display: contents;
+}
+
+.table-ctn th, .table-ctn td{
+max-width:550px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  //max-width:80px;
+}
+
+.table-ctn th{
+  //position: sticky;
+  //top: 0;
+  text-align: left;
+  font-weight: normal;
+  color: white;
+  //position: relative;
+  font-size:14px;
+  font-weight: 600;
+padding: $space-md;
+}
+
+.table-ctn tbody tr:hover{
+background: $ez-fog;
+}
+
+.table-ctn td{
+   font-size: 14px;
+   padding: $space-md;
+    color: $ez-charcoal;
+
+}
+
+.table-ctn tr:last-child .table-ctn td{
+  border:0;
+}
+
+.table-ctn tr.active{
+  background:red;
+}
+
+.table-ctn tr{
+  border:solid thin $ez-silver;
+}
+
+
+.tfoot{
+  padding: $space-md;
+  background:$ez-fog;
+  border: solid thin $ez-silver;
+  border-top:0 !important;
+}

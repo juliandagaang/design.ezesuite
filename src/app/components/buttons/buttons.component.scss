@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import '../../../styles.scss';
+
+$transition:color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out,box-shadow .3s ease-in-out;
+
+
+.ez-btn {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $ez-link-grey;
+    background: #ffffff;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid transparent;
+    transition: #{$transition};
+    //min-width:70px;
+}
+
+
+
+/*.ez-btn[disabled]{
+    opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}*/
+
+/*WITH SPINNER*/
+.ez-btn .spinner-border-sm {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-width: .1em;
+    margin-right: 5px;
+}
+/* utility buttons */
+.ez-btn-sm{
+   
+    padding: 4px 8px;
+    
+}
+.ez-btn-lg{
+   font-size: 21px;
+   min-width: 50px;
+
+    
+}
+
+.ez-btn:active{
+  -webkit-box-shadow: inset 10px 10px 300px 200px rgba(0,0,0,0.1);
+-moz-box-shadow: inset 10px 10px 300px 200px rgba(0,0,0,0.1);
+box-shadow: inset 10px 10px 300px 200px rgba(0,0,0,0.1);
+}
+.btn-primary{
+  color:white;
+}
+
+
+
+.btn-menu{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: #{$transition};
+  text-align:center;
+}
+
+
+
+
+
+
+
+

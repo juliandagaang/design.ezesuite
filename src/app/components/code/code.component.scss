@@ -1,0 +1,54 @@
+@import '../../../configurators.scss';
+@import '../../../skin.scss';
+.ot::before{
+  content:'< ';
+  color:#9b59b6;
+
+}
+.ot::after{
+  content:' >';
+  text-decoration: none;
+  color:#9b59b6;
+
+}
+
+.ct::before{
+  content:'</ ';
+  color:#9b59b6;
+
+}
+.ct::after{
+  content:' >';
+  color:#9b59b6;
+
+}
+
+.ilo-head{
+  //padding:$x-sides;
+  border:solid thin $ez-ash;
+//background: $ez-fog;
+  //background: white;
+  //background-size: 20% ;
+  //background-attachment: fixed; /* Center the image */
+  //background-repeat:  repeat;
+  padding: $space-lg;
+  background-image: url("https://previews.dropbox.com/p/thumb/AAfnQ0maBZx2cAqOZuw2QSAam_bqWvkIIM3p6rKfmpj4CLKpNT5dGFskU6XDzVvQGctIrnXmqIXUJGaDgdd8rw8oLyqcHPmMUjdIn0oUM-ZO0T22hHU8ZQ4GV4ig1CaKebnBD3IOK0TUiF8-2Se0eGmVvTA9sdCvpWxoxaKuvWeyBYyFxbQZRb848-M0lyJKWDcstBouiWysDgCZi9n1wbzY3V87hevgBc4zdVcokK1SZqz2DUoswMIQKTynyAENZkVy5TK27C1bMOK752bsQqSetDjXhm6lDs0RbbdngKVcVHEE1TkHyWBh_t-_80QC8uea4I3NhBTHGJ-AmW_rShqHqmH3YpgIfPBKpvfKkXnA8w/p.png?fv_content=true&size_mode=5");
+
+  }
+
+
+
+
+
+.ilo{
+  margin: 16px 0 0 0;
+}
+
+
+.ilo-foot{
+  font-size:16px;
+  color: white;
+  background: $ez-charcoal;
+  text-decoration: none;
+  padding: $space-lg;
+}

@@ -1,0 +1,74 @@
+<form class="content-area">
+  <div class="content-head grid-autofit grid-middle ">
+    <div class="grid-start grid-middle">
+      <button btnbasiclarge (click)="goBack()">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h1 class="ml3">Edit user role</h1>
+    </div>
+
+    <div *ngIf="viewTab == 'user'" class=" grid-end ">
+      <button btnminor><i class="fas fa-plus mr1"></i> Add users</button>
+    </div>
+  </div>
+
+  <div class="content-body">
+    <div class=" tab-panel mb3">
+      <a
+        class="tab-item"
+        [class.active]="viewTab == 'general'"
+        (click)="viewTab = 'general'"
+      >
+        General
+      </a>
+      <a
+        class="tab-item"
+        [class.active]="viewTab == 'permission'"
+        (click)="viewTab = 'permission'"
+      >
+        Permissions
+      </a>
+      <a
+        class="tab-item"
+        [class.active]="viewTab == 'user'"
+        (click)="viewTab = 'user'"
+      >
+        Users
+      </a>
+    </div>
+    <div [ngSwitch]="viewTab">
+      <div *ngSwitchCase="'general'">
+        <div class="grid">
+          <div class="grid-sm-12 grid-md-6 grid-lg-5">
+            <div class="input-panel ">
+              <label class="input-head">Application</label>
+              <input autofocus type="text" value="Storya" class="input-field" />
+            </div>
+            <div class="input-panel ">
+              <label class="input-head">Role name</label>
+              <input type="text" value="Branch manager" class="input-field" />
+            </div>
+            <div class="input-panel ">
+              <label class="input-head">Description</label>
+              <textarea type="text" value="Branch manager" class="input-field"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchCase="'permission'"><h1>Permission table here</h1></div>
+      <div *ngSwitchCase="'user'">
+        User table here, if table == 0, show CTA button, else show table; CTA
+        top right
+      </div>
+    </div>
+  </div>
+  <div class="content-foot grid-start gap-xs">
+    <button btnminor (click)="goBack()">Cancel</button>
+    <button *ngIf="!chu" (click)="chu = !chu" btnmajor>
+      Save changes
+    </button>
+    <button *ngIf="chu" disabled btnmajor>
+      <i class="loader fas fa-spinner"></i> Saving
+    </button>
+  </div>
+</form>

@@ -1,0 +1,272 @@
+<div class="content-area">
+  <div class="content-head grid-autofit grid-middle gap-sm-rp">
+    <div class="grid-start grid-middle gap-xs ">
+      
+        <button btnbasiclarge routerLink="/ezesuite/tablebasic">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+     
+
+      <h1>Search users</h1>
+    </div>
+
+    <div class="flex-right flex-middle">
+      <div class="input-panel mr1 ">
+        <div class="flex">
+          <div class="input-img flex-middle text-subtle">
+            <p><i class="fas fa-search"></i></p>
+          </div>
+          <input
+            autofocus
+            placeholder="Search"
+            type="text"
+            class="input-field"
+          />
+        </div>
+      </div>
+      <button routerLink="/ezesuite/tablebasic" btnbasic>
+        Cancel
+      </button>
+    </div>
+  </div>
+  <div class="content-body">
+  <!--
+    <div class="grid-start grid-middle gap-sm">
+      <div class="dropdown-ctn">
+        <button (click)="filter = !filter" btnbasic>
+          Company
+          <i class=" fas fa-angle-down"></i>
+        </button>
+        <div *ngIf="filter" class="dropdown-panel ">
+          <div class="dropdown-item ">
+            <label class="input-check "
+              >All
+              <input type="checkbox" id="check" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="dropdown-item ">
+            <label class="input-check "
+              >Branch manager
+              <input type="checkbox" id="check" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="dropdown-item ">
+            <label class="input-check "
+              >Marketing manager
+              <input type="checkbox" id="check" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="dropdown-item ">
+            <label class="input-check "
+              >Marketing manager
+              <input type="checkbox" id="check" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown-ctn">
+        <button (click)="filter2 = !filter2" btnbasic>
+          User role <span *ngIf="counter1" class="text-link">(1)</span>
+          <i class=" fas fa-angle-down"></i>
+        </button>
+        <div *ngIf="filter2" class="dropdown-panel ">
+          <div class="dropdown-item ">
+            <label class="input-check "
+              >All
+              <input type="checkbox" id="check" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="dropdown-item ">
+            <label class="input-check "
+              >Branch manager
+              <input
+                (click)="counter1 = !counter1"
+                type="checkbox"
+                id="check"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="dropdown-item ">
+            <label class="input-check "
+              >Marketing manager
+              <input type="checkbox" id="check" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="dropdown-item ">
+            <label class="input-check "
+              >Marketing manager
+              <input type="checkbox" id="check" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <button *ngIf="counter1" (click)="counter1 = !counter1" btnbasic>
+        <span class="text-link">Clear filters</span>
+      </button>
+    </div>
+    -->
+    <div class="grid grid-middle gap-sm-rp">
+      <div class="input-panel grid-sm-12 grid-md-4 grid-lg-2">
+        <label class="input-head" for="sample">Filter 1</label>
+        <select class="input-field">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div class="input-panel grid-sm-12 grid-md-4 grid-lg-2">
+        <label class="input-head" for="sample">Filter 2</label>
+        <select class="input-field">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      
+    </div>
+    <div class="table-ctn">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <label class="input-check  ">
+                <input type="checkbox" id="check" />
+                <span class=" checkmark"></span>
+              </label>
+            </th>
+            <th>
+              <a>Name <i class="ml1 fas fa-arrow-up"></i></a>
+            </th>
+            <th>
+              <a>Company <i class="ml1 opacity-50 fas fa-arrows-alt-v"></i></a>
+            </th>
+            <th><a>Email <i class="ml1 opacity-50 fas fa-arrows-alt-v"></i></a></th>
+            <th><a>Contact <i class="ml1 opacity-50 fas fa-arrows-alt-v"></i></a></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label class="input-check  ">
+                <input
+                  routerLink="/ezesuite/tablecontext"
+                  type="checkbox"
+                  id="check"
+                />
+                <span class=" checkmark"></span>
+              </label>
+            </td>
+            <td>
+              <span class="text-link ">
+                Anne Curtis
+              </span>
+            </td>
+
+            <td>ABS-CBN</td>
+            <td>anne.curtis@gmail.com</td>
+            <td>(06) 3711 0054</td>
+            <td class="text-right">
+            <button btnbasicsmall><i class="fas fa-ellipsis-h"></i></button>
+              
+            </td>
+          </tr>
+          <tr *ngFor="let users of users">
+            <td>
+              <label class="input-check  ">
+                <input type="checkbox" id="check" />
+                <span class=" checkmark"></span>
+              </label>
+            </td>
+            <td>
+              <span class="text-link ">
+                {{users.Name}}
+              </span>
+            </td>
+            <td>{{users.Role}}</td>
+            <td>{{users.Email}}</td>
+            <td>{{users.Contact}}</td>
+            <td class="text-right">
+              <button btnbasicsmall><i class="fas fa-ellipsis-h"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tfoot">
+        <div class="grid grid-middle ">
+          <div
+            class="rp-center text-subtle grid-sm-12 grid-md-4 grid-start grid-middle"
+          >
+            <span class="mr1">Show</span>
+            <div class="dropdown-ctn">
+              <button (click)="citrus = !citrus" btnminorsmall>
+                10 <i class=" fas fa-angle-down"></i>
+              </button>
+              <div *ngIf="citrus" class="dropdown-panel">
+                <a
+                  class="dropdown-item"
+                  [class.active]="viewMode == 'orange'"
+                  (click)="viewMode = 'orange' ; citrus = !citrus"
+                  >20</a
+                >
+                <a
+                  class="dropdown-item"
+                  [class.active]="viewMode == 'lemon'"
+                  (click)="viewMode = 'lemon';citrus = !citrus"
+                  >30</a
+                >
+              </div>
+            </div>
+            <span class="ml1">per page</span>
+          </div>
+
+          <p class="m0 rp-center grid-sm-12 grid-md-4 text-subtle text-center">
+            1-10 of 50
+          </p>
+
+          <div class="rp-center  grid-md-4 grid-end ">
+            <div class="pgn-panel">
+              <a class="pgn-item active">1</a>
+              <a class="pgn-item">2</a>
+              <a class="pgn-item">3</a>
+              <a class="pgn-item">4</a>
+              <a class="pgn-item">5</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+<ul class="grid-table ez-ctn flex">
+      <li>
+        <div class="flex-column">
+          <div class="t_head">Name</div>
+          <div class="t_body">Chubedsfsd fsdfs</div>
+        </div>
+      </li>
+      <li class="flex-grow-2">
+        <div class="flex-column">
+          <div class="t_head">Last name</div>
+          <div class="t_body">Chubedftgtertre sfsd fsdfs</div>
+        </div>
+      </li>
+      <li class="flex-shrink-1">
+        <div class="flex-column">
+          <div class="t_head">Email</div>
+          <div class="t_body">Chub</div>
+        </div>
+      </li>
+    </ul>
+    -->
+  </div>
+</div>

@@ -1,0 +1,145 @@
+<div class="content-area">
+  <div class="content-body">
+    <ul class="grid-column gap-xl">
+      <li>
+        <div class="display-lg">Table templates</div>
+        <p>
+          Table components:
+
+          <a routerLink="/ezesuite/buttons" class="text-link"> Content menus</a>
+          ,
+          <a routerLink="/ezesuite/buttons" class="text-link"> Context menus</a>
+          ,
+          <a routerLink="/ezesuite/forminputs" class="text-link">
+            Form inputs</a
+          >
+          ,
+          <a routerLink="/ezesuite/navlinks" class="text-link"> Tabs</a> ,
+          <a routerLink="" class="text-link"> Visualisation (WIP)</a>
+        </p>
+        <p>
+          Related articles:
+          <a class="text-link"> Errors & alert messages</a>
+        </p>
+        
+      </li>
+      <li>
+      <ul class="tab-panel">
+      <li class="tab-item " [class.active]="tempTab == 'temp1'"
+                (click)="tempTab = 'temp1'">Template 1</li>
+      <li class="tab-item " [class.active]="tempTab == 'temp2'"
+                (click)="tempTab = 'temp2'">Template 2</li>
+      <li class="tab-item " [class.active]="tempTab == 'temp3'"
+                (click)="tempTab = 'temp3'">Template 3</li>
+      <li class="tab-item " [class.active]="tempTab == 'temp4'"
+                (click)="tempTab = 'temp4'">Template 4</li>
+      <li class="tab-item " [class.active]="tempTab == 'temp5'"
+                (click)="tempTab = 'temp5'">Template 5</li>
+      <li class="tab-item " [class.active]="tempTab == 'temp6'"
+                (click)="tempTab = 'temp6'">Template 6</li>
+    </ul>
+      </li>
+
+      <li [ngSwitch]="tempTab">
+      <div *ngSwitchCase="'temp1'">
+      <h2 >Template 1</h2>
+        <p>Follow this template when a table is empty. Make sure that call-to-action buttons should be visible to enable the users easily learn and perform next-step actions. </p>
+        <a class="text-link" routerLink="/ezesuite/tableempty"
+          ><p>View in full</p></a
+        >
+        <ilo>
+          <ilo-head>
+            <tableempty-page></tableempty-page>
+          </ilo-head>
+        </ilo>
+      </div>
+      <div *ngSwitchCase="'temp2'">
+      <h2 >Template 2</h2>
+        <a class="text-link" routerLink="/ezesuite/tablebasic"
+          ><p>View in full</p></a
+        >
+        <ilo>
+          <ilo-head>
+            <tablebasic-page></tablebasic-page>
+          </ilo-head>
+          <ilo-foot>
+            <iframe
+              src="https://codesandbox.io/embed/engagis-gel-v10-enkq3?fontsize=14&module=%2Fsrc%2Fapp%2FGEL%2FEze%20Suite%2Ftables%2Ftablebasic.component.html&view=editor"
+              title="Engagis GEL V1.0"
+              allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media"
+              style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+              sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+            ></iframe>
+          </ilo-foot>
+        </ilo>
+      </div>
+      <div *ngSwitchCase="'temp3'">
+      <h2 >Template 3</h2>
+        <a class="text-link" routerLink="/ezesuite/tablecontext"
+          ><p>View in full</p></a
+        >
+        <ilo>
+          <ilo-head>
+            <tablecontext-page></tablecontext-page>
+          </ilo-head>
+          <ilo-foot>
+            <iframe
+              src="https://codesandbox.io/embed/engagis-gel-v10-enkq3?fontsize=14&module=%2Fsrc%2Fapp%2FGEL%2FEze%20Suite%2Ftables%2Ftablecontext.component.html&view=editor"
+              title="Engagis GEL V1.0"
+              allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media"
+              style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+              sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+            ></iframe>
+          </ilo-foot>
+        </ilo>
+      </div>
+      <div *ngSwitchCase="'temp4'">
+      <h2>Template 4</h2>
+        <a class="text-link" routerLink="/ezesuite/tablegroup"
+          ><p>View in full</p></a
+        >
+        <ilo>
+          <ilo-head>
+            <tablegroup-page></tablegroup-page>
+          </ilo-head>
+          <ilo-foot>
+            <iframe
+              src="https://codesandbox.io/embed/engagis-gel-v10-enkq3?fontsize=14&module=%2Fsrc%2Fapp%2FGEL%2FEze%20Suite%2Ftables%2Ftablegroup.component.html&view=editor"
+              title="Engagis GEL V1.0"
+              allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media"
+              style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+              sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+            ></iframe>
+          </ilo-foot>
+        </ilo>
+      </div>
+      <div *ngSwitchCase="'temp5'">
+      <h2>Template 5</h2>
+        <a class="text-link" routerLink="/ezesuite/tablesearch"
+          ><p>View in full</p></a
+        >
+        <ilo>
+          <ilo-head>
+            <tablesearch-page></tablesearch-page>
+          </ilo-head>
+        </ilo>
+      </div>
+      <div *ngSwitchCase="'temp6'">
+      <h2>Template 6</h2>
+        <a class="text-link" routerLink="/ezesuite/tabletrash"
+          ><p>View in full</p></a
+        >
+        <ilo>
+          <ilo-head>
+            <tabletrash-page></tabletrash-page>
+          </ilo-head>
+        </ilo>
+      </div>
+        
+      </li>
+     
+
+      
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,143 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<div style="text-align:center">
+	<h1>
+		Welcome to {{ title }}!
+	</h1>
+	<img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>-->
+<div [@slideright] class="d-md-none" *ngIf="test">
+  <div class="sideoverlay" (click)="test = !test"></div>
+  <div class="testside ">
+    <router-outlet name="sidebar"></router-outlet>
+  </div>
+</div>
+
+<main>
+  <aside class="d-none d-lg-block">
+    <router-outlet name="sidebar"></router-outlet>
+  </aside>
+
+  <div class="wrapper">
+    <header class="flex-spacebetween">
+      <div class=" menu-panel">
+        <a class="d-none d-sm-block d-lg-none grid grid-itm-middle ">
+          <button btnmajorlarge (click)="test = !test">
+            <i class="fas fa-bars"></i>
+          </button>
+        </a>
+
+        <a
+          [routerLink]="[{outlets:{ primary: ['home'], sidebar: ['sidehome'] } }]"
+          routerLinkActive="active"
+          class="menu-item"
+        >
+          Home
+        </a>
+
+        <a
+          [routerLink]="[{outlets:{ primary: ['ezesuite'], sidebar: ['sidedls'] } }]"
+          routerLinkActive="active"
+          class="menu-item"
+        >
+          Eze Suite
+        </a>
+        <div class="dropdown-ctn">
+          <a [class.active]="" class="menu-item " (click)="citrus = !citrus">
+            Citrus <i class="ml1 fas fa-caret-down"></i>
+          </a>
+          <div *ngIf="citrus" class="dropdown-panel">
+            <a
+              class="dropdown-item"
+              [class.active]="viewMode == 'orange'"
+              (click)="viewMode = 'orange' ; citrus = !citrus"
+              >Orange</a
+            >
+            <a
+              class="dropdown-item"
+              [class.active]="viewMode == 'lemon'"
+              (click)="viewMode = 'lemon';citrus = !citrus"
+              >Lemon</a
+            >
+          </div>
+        </div>
+        <!--
+          <div class="dropdown-ctn">
+          <a [class.active]="" class="menu-item " (click)="citrus = !citrus">
+            Citrus <i class="ml1 fas fa-caret-down"></i>
+          </a>
+          <div class="dropdown-panel">
+            <a class="dropdown-item ">
+
+                <label class="input-check  "
+                  >Pasta
+                  <input type="checkbox" id="check" />
+                  <span class="checkmark"></span>
+                </label>
+
+            </a>
+            <a class="dropdown-item">
+
+                <label class="input-check  "
+                  >Pasta
+                  <input type="checkbox" id="check" />
+                  <span class="checkmark"></span>
+                </label>
+
+            </a>
+          </div>
+        </div>
+        -->
+      </div>
+
+      <div class="d-none d-lg-block dropdown-ctn flex-middle ">
+        <div class=" mr3 text-right">
+          <h3 class="m0">Lennie Babalcon</h3>
+          <div class="text-subtle text-small">Branch Manager</div>
+        </div>
+
+        <a class="picker" (click)="pick = !pick">
+          <i class="fab fa-sketch"></i>
+        </a>
+        <div *ngIf="pick" class="dropdown-panel dropend">
+          <div (click)="pick = !pick" class="grid-column gap-sm">
+            <a class="dropdown-item">
+              <span style="font-size:24px" class="mr3">
+                <i class="fas fa-rocket"></i>
+              </span>
+              <span>
+                Admin Portal
+              </span>
+            </a>
+
+            <a class="dropdown-item active">
+              <span style="font-size:24px" class="mr3">
+                <i class="fas fa-rocket"></i>
+              </span>
+              <span>
+                Admin Portal
+              </span>
+            </a>
+            <div class="divider"></div>
+            <div class="px4">
+              <p class="text-link m0">Logout</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--<div style="padding-right:16px;" class="flex-middle">
+				<btn-major>
+					Download resources
+				</btn-major>
+
+			</div>-->
+    </header>
+
+    <section>
+      <router-outlet></router-outlet>
+      <footer>
+        <p class="text-subtle">V 1.0.0</p>
+      </footer>
+    </section>
+  </div>
+</main>

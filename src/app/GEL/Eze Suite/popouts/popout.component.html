@@ -1,0 +1,110 @@
+<div class="content-area">
+  <div class="content-body">
+    <ul class="grid-column gap-xl-rp">
+      <li>
+        <div class="display-lg">
+          Popouts
+        </div>
+      </li>
+      <li>
+        <h2>Modal</h2>
+        <p>
+          <a (click)="testmodal = !testmodal" class="text-link">Preview</a>
+        </p>
+        <ilo>
+          <ilo-head>
+            <div class="modal-panel">
+              <div class="modal-body">
+                <h2 class="mb4">Delete record while it's in used?</h2>
+                <p>
+                  Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+                  Vivamus suscipit tortor eget felis porttitor volutpat.
+                </p>
+              </div>
+              <div class="divider"></div>
+              <div class="modal-foot grid-center gap-xs">
+                <button btnminor>Don't delete</button>
+                <button btnmajor>Yes, delete</button>
+              </div>
+            </div>
+          </ilo-head>
+        </ilo>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <h2>Toaster (new)</h2>
+        <ilo>
+          <ilo-head>
+            <div class="grid-autofill gap-sm">
+              <div class="toast-panel">
+                <div class="toast-head flex-middle flex-spacebetween">
+                  <span class="text-success">
+                    <i class="far fa-check-circle"></i> Successful
+                  </span>
+                  <span>
+                    <a><i class="text-subtle fas fa-times"></i></a>
+                  </span>
+                </div>
+                <div class="toast-body ">
+                  A staff record,
+                  <span class="text-subtle">Nadine Lustre</span> is moved to
+                  trash.
+                  <a class="text-link">Undo</a>
+                </div>
+              </div>
+              <div class="toast-panel">
+                <div class="toast-head flex-middle flex-spacebetween">
+                  <span class="text-success">
+                    <i class="far fa-check-circle"></i> Successful
+                  </span>
+                  <span>
+                    <a><i class="text-subtle fas fa-times"></i></a>
+                  </span>
+                </div>
+                <div class="toast-body ">
+                  A new staff record is created. <a class="text-link">Open</a>
+                </div>
+              </div>
+              <div class="toast-panel">
+                <div class="toast-head flex-middle flex-spacebetween">
+                  <span class="text-danger">
+                    <i class="fas fa-exclamation-circle"></i> Unsuccessful
+                  </span>
+                  <span>
+                    <a><i class="text-subtle fas fa-times"></i></a>
+                  </span>
+                </div>
+                <div class="toast-body ">
+                  Operation can not be done due to poor connection.
+                  <a class="text-link">Refresh page</a>
+                </div>
+              </div>
+            </div>
+          </ilo-head>
+        </ilo>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <h2>Tooltips (WIP)</h2>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="testmodal" class="modal-ctn">
+  <div class="sideoverlay" (click)="testmodal = !testmodal"></div>
+  <div class="modal-panel">
+    <div class="modal-body">
+      <h2 class="mb4">Delete record while it's in used?</h2>
+      <p>
+        Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus
+        suscipit tortor eget felis porttitor volutpat.
+      </p>
+    </div>
+    <div class="divider"></div>
+    <div class="modal-foot grid-center gap-xs">
+      <button (click)="testmodal = !testmodal" btnminor>Don't delete</button>
+      <button (click)="testmodal = !testmodal" btnmajor>Yes, delete</button>
+    </div>
+  </div>
+</div>

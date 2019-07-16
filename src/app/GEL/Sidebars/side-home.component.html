@@ -1,0 +1,20 @@
+<div class="sidebrand flex-middle ">
+  <div>
+    <h1>Engagis GEL</h1>
+    <p>Global Experience Language</p>
+  </div>
+</div>
+<!---->
+
+<sidescroll>
+  <sidepanel title="Get started">
+    <a
+      class="drawer-item"
+      routerLinkActive="active"
+      [routerLink]="intro.routePath"
+      *ngFor="let intro of intro"
+    >
+      {{intro.name}}
+    </a>
+  </sidepanel>
+</sidescroll>

@@ -1,0 +1,53 @@
+<form class="content-area">
+  <div class="content-head">
+    <div class="grid-start grid-middle gap-sm ">
+      <button btnbasiclarge (click)="goBack()">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h1>Create new user</h1>
+    </div>
+  </div>
+
+  <div class="content-body">
+    <div class="grid">
+      <div class="grid-sm-12 grid-md-6 grid-lg-4">
+        <div class="input-panel">
+          <label class="input-head input-required">Full name </label>
+          <input autofocus required type="text" class="input-field" />
+        </div>
+        <div class="input-panel">
+          <label class="input-head input-required">Email </label>
+          <input required type="text" class="input-field" />
+          <div class="input-foot">example@yourdomain.com</div>
+        </div>
+        <div class="input-panel ">
+          <label class="input-head input-required">Phone number </label>
+          <input
+            required
+            placeholder="+63-3221-312-12"
+            type="text"
+            class="input-field input-required"
+          />
+        </div>
+        <div class="input-panel">
+          <label class="input-head ">Tell me about yourself. </label>
+          <textarea class="input-field "></textarea>
+          <div class="input-foot">
+            Keep it short and simple. Up to 100 words only.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-foot grid-start gap-xs">
+    <button btnminor (click)="goBack()">Cancel</button>
+    <button *ngIf="!chu" (click)="chu = !chu" btnmajor>
+      Submit
+    </button>
+    <button *ngIf="chu" disabled btnmajor>
+      <i class="loader fas fa-spinner"></i> Saving
+    </button>
+  </div>
+  
+</form>

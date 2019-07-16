@@ -1,0 +1,114 @@
+<form class="content-area">
+  <div class="content-head grid-middle grid-start gap-sm">
+    <button btnbasiclarge (click)="goBack()">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <h1>Create an account</h1>
+  </div>
+  <div class="content-body">
+    <div class="grid-column gap-lg">
+      <div class="grid ">
+        <div class="grid-sm-12  grid-md-6 grid-lg-4 ">
+          <h2>Personal information</h2>
+          <div class="grid-ctn gap-sm-rp">
+            <div class="input-panel grid-sm-12 grid-md-6">
+              <label class="input-head input-required">First name </label>
+              <input autofocus type="text" class="input-field" />
+            </div>
+
+            <div class="input-panel grid-sm-12 grid-md-6">
+              <label class="input-head input-required">Last name </label>
+              <input type="text" class="input-field" />
+            </div>
+          </div>
+          <div class="input-panel">
+            <div class="input-head input-required">Your gender</div>
+            <div class="checkgroup">
+              <label class="input-check  "
+                >Male
+                <input type="radio" name="radio" />
+                <span class="radiomark"></span>
+              </label>
+              <label class="input-check  "
+                >Female
+                <input type="radio" name="radio" />
+                <span class="radiomark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid ">
+        <div class="grid-sm-12 grid-md-6 grid-lg-4">
+          <h2>Contact information</h2>
+
+          <div class="input-panel ">
+            <label class="input-head input-required">Email </label>
+            <input type="text" class="input-field" />
+            <div class="input-foot">example@yourdomain.com</div>
+          </div>
+          <div class="input-panel ">
+            <label class="input-head input-required">Phone </label>
+            <input type="text" class="input-field" placeholder="+63-2112-123" />
+          </div>
+
+          <div class="input-panel ">
+            <label class="input-head input-required">Complete address</label>
+            <input type="text" class="input-field" />
+          </div>
+          <div class="input-panel">
+            <div class="input-head">Preferred notification channel</div>
+
+            <div class="checkgroup">
+              <label class="input-check  "
+                >Text
+                <input type="checkbox" id="check" />
+                <span class=" checkmark"></span>
+              </label>
+              <label class="input-check  "
+                >Email
+                <input type="checkbox" id="check" />
+                <span class="checkmark "></span>
+              </label>
+            </div>
+          </div>
+          <div class="input-panel">
+            <div class="input-head">Preferred notification channel</div>
+
+            <div class="checkgroup">
+              <label class="input-check">
+                <div class="checklabel">
+                  Chuchu
+                  <div class="text-small">Describe what helper is</div>
+                </div>
+
+                <input type="checkbox" id="check" />
+                <span class=" checkmark"></span>
+              </label>
+            </div>
+            <div class="checkgroup">
+              <label class="input-check">
+                <div class="checklabel">
+                  Chuchu
+                  <div class="text-small">Describe what helper is</div>
+                </div>
+
+                <input type="checkbox" id="check" />
+                <span class=" checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-foot grid-start gap-xs">
+    <button btnminor (click)="goBack()">Cancel</button>
+    <button *ngIf="!chu" (click)="chu = !chu" btnmajor>
+      Submit
+    </button>
+    <button *ngIf="chu" disabled btnmajor>
+      <i class="loader fas fa-spinner"></i> Saving
+    </button>
+  </div>
+</form>

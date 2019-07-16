@@ -1,0 +1,154 @@
+@import './skin.scss';
+
+.menu-item:hover{
+  color:$ez-green;
+}
+.menu-item.active{
+  color:$ez-green;
+}
+
+
+
+.dropdown-item:hover{
+  color:$ez-green;
+}
+
+.dropdown-item.active{
+  color:$ez-green;
+}
+
+
+.drawer-item:hover{
+  color: $ez-green;
+}
+
+.drawer-item:hover,.drawer-item.active{
+  color: $ez-green;
+}
+
+.sidebrand{
+  background: $ez-green !important;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.btn-primary{
+  background-color:$ez-green !important;
+  border:solid thin $ez-green;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%) !important;
+ }
+
+
+ .ez-btn:hover {  
+  color:$ez-dark-green !important;
+}
+
+ .btn-primary:hover{
+  background-color:$ez-dark-green !important;
+  color:white !important;
+ }
+
+ .btn-menu:hover{
+  color:$ez-dark-green !important;
+ }
+
+ .btn-menu:hover .btn-basic{
+  color:$ez-dark-green ;
+ }
+
+ .btn-menu:hover  .btn-primary{
+  background-color:$ez-dark-green !important;
+ }
+
+ 
+ .btn-secondary{
+  color:$ez-green !important;
+  border:solid thin $ez-green !important;
+}
+
+.ot,.ct{
+  color:$ez-green;
+}
+
+.tab-item:hover{
+  color: $ez-green;
+
+}
+
+.tab-item.active{
+  border-color: $ez-green;
+
+}
+
+.checkmark:after {
+
+  color: $ez-green;
+
+}
+
+.radiomark:after {
+  
+
+  color: $ez-green;
+
+}
+/*On mouse-over, add a grey background color */
+.input-check:hover input ~ .checkmark {
+
+  outline:solid 1px $ez-green;
+}
+
+/* On mouse-over, add a grey background color */
+.input-check:hover input ~ .radiomark {
+  border:solid 1px $ez-green;
+  border-radius:50%;
+
+}
+
+.input-field:focus{
+  border: solid 1px $ez-green !important;
+outline:none;
+}
+
+.text-link{
+  color: $ez-link-green;
+}
+.text-link:hover{
+  color:$ez-dark-green;
+}
+
+.table-ctn th{
+  background: $ez-green;
+  border:solid thin $ez-green;
+}
+
+.table-ctn .selected{
+  background: $ez-light-green;
+  border:solid thin $ez-green;
+}
+.table-ctn .selected:hover{
+  background: $ez-light-green;
+  border:solid thin $ez-green;
+}
+
+.pgn-panel .active{
+  background:$ez-green;
+  border: solid thin $ez-green !important;
+  color: white;
+}
+
+.picker{
+  color:$ez-green;
+}
+
+/* Show the checkmark when checked */
+.input-check input:checked ~ .checkmark {
+  border: solid 1px $ez-green !important;
+}
+
+.input-check input:checked ~ .radiomark {
+  border: solid 1px $ez-green !important;
+}
+
+.pgn-item{
+  color: $ez-green;
+}

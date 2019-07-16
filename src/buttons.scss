@@ -1,0 +1,92 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
+
+$transition:color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out,box-shadow .3s ease-in-out;
+
+
+.ez-btn {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $ez-mud;
+    background: #ffffff;
+    padding: 8px 14px;
+    font-size: 14px;
+    //line-height: 1.5;
+    border-radius: 0;
+    border:solid thin white;;
+    cursor: pointer;
+    outline: none;
+    //margin-right:10px;
+    min-height:40px;
+
+    transition: #{$transition};
+    
+    
+}
+
+
+
+.ez-btn[disabled], .btn-primary[disabled]{
+  opacity: 0.7 !important;
+cursor: default !important;
+pointer-events: none !important;
+}
+
+/*WITH SPINNER*/
+
+/* utility buttons */
+.ez-btn-sm{
+  min-width:0 !important;
+   min-height:0 !important;
+    padding: 4px 8px !important;
+    
+}
+.ez-btn-lg{
+   font-size: 21px !important;
+   min-width: 50px !important;
+   margin:0 !important;
+
+    
+}
+
+.ez-btn:active{
+  -webkit-box-shadow: inset 10px 10px 300px 200px rgba(0,0,0,0.1);
+-moz-box-shadow: inset 10px 10px 300px 200px rgba(0,0,0,0.1);
+box-shadow: inset 10px 10px 300px 200px rgba(0,0,0,0.1);
+border:solid thin rgba(0,0,0,0.1);
+}
+.btn-primary{
+  color:white !important;
+
+}
+
+.btn-secondary{
+  color:white;
+
+}
+
+
+
+
+.btn-menu{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: #{$transition};
+  text-align:center;
+}
+
+
+
+
+
+
+
+

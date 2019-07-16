@@ -1,0 +1,80 @@
+@import '../../../../src/configurators.scss';
+@import '../../../../src/skin.scss';
+/*
+.content-head{
+  //padding:8px 0;
+  padding: $sides;
+  background:white;
+  //min-height:$sz-contenthead;
+  -webkit-box-shadow: 10px 2px 5px 0px rgba(0,0,0,0.05);
+-moz-box-shadow: 10px 2px 5px 0px rgba(0,0,0,0.05);
+box-shadow: 10px 2px 5px 0px rgba(0,0,0,0.05);
+//display:flex;
+//justify-content: space-between;
+
+}*/
+
+
+
+:host(content-head){
+
+   padding: 20px 40px;;
+   background:white;
+
+   -webkit-box-shadow: 0 2px 5px 0px rgba(0,0,0,0.05);
+ -moz-box-shadow: 0 2px 5px 0px rgba(0,0,0,0.05);
+ box-shadow: 0 2px 5px 0px rgba(0,0,0,0.05);
+
+ z-index:1;
+
+
+}
+
+
+
+.content-area{
+  display: flex;
+  flex-flow: column;
+  //height:calc(100vh - #{$sz-contenthead});
+  //overflow-x:hidden;
+  background:white;
+  min-height:calc(100vh - #{$sz-contenthead});
+  
+}
+
+:host(content-body){
+  flex:1;
+  //height:  calc(100% - (#{$sz-contenthead +$sz-contentfoot}));
+  //max-height:  calc(100% - (#{$sz-contenthead});
+  //overflow-x:hidden;
+  //height:100vh;
+  //font-size:32px;
+  padding:20px 40px;
+  //background:$ez-fog;
+}
+
+
+
+
+:host(content-foot){
+  background: white;
+  padding:20px 40px;
+  //min-height:$sz-contentfoot;
+  -webkit-box-shadow: 0 -2px 5px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0 -2px 5px 0px rgba(0,0,0,0.05);
+  box-shadow: 0 -2px 5px 0px rgba(0,0,0,0.05);
+}
+
+
+
+@media all and (min-width: 0) and (max-width:735px){
+  :host(content-foot){
+    padding:20px;
+  }
+  :host(content-body){
+    padding:20px;
+  }
+  :host(content-head){
+    padding:20px;
+  }
+}

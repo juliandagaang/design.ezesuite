@@ -1,0 +1,149 @@
+<div class="content-area">
+  <div class="content-body">
+    <ul class="grid-column gap-xl">
+      <li>
+        <div class="display-lg">
+          Colours
+        </div>
+        <p>
+       All main style attributes including spacing, states and dimensions of Eze Suite's major components are defined in styles.scss as instructed in the <a class="text-link">introduction</a>. However, all application-based colour properties are sorted out for easier usage and organisation. Hence, enable or import only one from the four application-based palettes according to the application that you are building. Base colours and status colours are global which are mainly utilised in styles.scss.  
+        </p>
+      </li>
+      <li>
+      <h1>Base colours</h1>
+       <p>
+        Charcoal and mud are mainly used as foregrounds. Rock is mainly utilised to emphasize form inputs. Silver is applied as divider or border colours when required. Both ash and fog, and sometimes silver are utilised as container backgrounds.
+        </p>
+      </li>
+
+      <li class="grid-autofit gap-lg">
+        
+
+        <div *ngFor="let grey of grey">
+          <div
+            [style.background]="grey.colour_hex"
+            style="margin-bottom: 14px; width:100%; height:150px;"
+          ></div>
+          <h3>{{grey.colour_name}}</h3>
+          <ul class="list-panel">
+            <li>{{grey.colour_hex}}</li>
+            <li>{{grey.colour_rgb}}</li>
+          </ul>
+        </div>
+      </li>
+      <li class="divider"></li>
+      <li>
+      <h1>Application-based colours</h1>
+       <p>
+        There are four application-specific colour palettes which are blue for Eze Impress, orange for VMS, purple for QMS and green for Find. Each palette has three shades which are dark, main and light. Use dark colours for hyperlinks and light colours for backgrounds. Use the main colours (e.g. ez-blue) to define the overall look of an application.
+        </p>
+      </li>
+      <li class="grid-autofit gap-lg">
+      <div>
+      <h2>Eze Impress</h2>
+      <p>
+      Enable <span class="text-link">style-blue.scss</span> when using this palette.
+      </p>
+      
+      </div>
+       
+
+        <div *ngFor="let blue of blue">
+          <div
+            [style.background]="blue.colour_hex"
+            style="margin-bottom: 14px; width:100%; height:150px;"
+          ></div>
+          <h3>{{blue.colour_name}}</h3>
+          <ul class="list-panel">
+            <li>{{blue.colour_hex}}</li>
+            <li>{{blue.colour_rgb}}</li>
+          </ul>
+        </div>
+      </li>
+      
+      <li class="grid-autofit gap-lg">
+        <div>
+      <h2>Queue Management System (QMS)</h2>
+      <p>
+      Enable <span class="text-link">style-purple.scss</span> when using this palette.
+      </p>
+      
+      </div>
+        <div *ngFor="let purple of purple">
+          <div
+            [style.background]="purple.colour_hex"
+            style="margin-bottom: 14px; width:100%; height:150px;"
+          ></div>
+          <h3>{{purple.colour_name}}</h3>
+          <ul class="list-panel">
+            <li>{{purple.colour_hex}}</li>
+            <li>{{purple.colour_rgb}}</li>
+          </ul>
+        </div>
+      </li>
+      
+      <li class="grid-autofit gap-lg">
+        <div>
+      <h2>Eze Find</h2>
+      <p>
+      Enable <span class="text-link">style-green.scss</span> when using this palette.
+      </p>
+      
+      </div>
+        <div *ngFor="let green of green">
+          <div
+            [style.background]="green.colour_hex"
+            style="margin-bottom: 14px; width:100%; height:150px;"
+          ></div>
+          <h3>{{green.colour_name}}</h3>
+          <ul class="list-panel">
+            <li>{{green.colour_hex}}</li>
+            <li>{{green.colour_rgb}}</li>
+          </ul>
+        </div>
+      </li>
+      
+      <li class="grid-autofit gap-lg">
+        <div>
+      <h2>Visitor Management System (VMS)</h2>
+      <p>
+      Enable <span class="text-link">style-orange.scss</span> when using this palette.
+      </p>
+      
+      </div>
+        <div *ngFor="let orange of orange">
+          <div
+            [style.background]="orange.colour_hex"
+            style="margin-bottom: 14px; width:100%; height:150px;"
+          ></div>
+          <h3>{{orange.colour_name}}</h3>
+          <ul class="list-panel">
+            <li>{{orange.colour_hex}}</li>
+            <li>{{orange.colour_rgb}}</li>
+          </ul>
+        </div>
+      </li>
+      <li class="divider"></li>
+       <li>
+      <h1>Status colours</h1>
+       <p>
+        Use status colours to easily inform or alert users about a certain status of a record or of an event. Use these colours as foregrounds only. See toasters in Popouts for example.
+        </p>
+      </li>
+      <li class="grid-autofill gap-lg">
+        
+        <div *ngFor="let status of status">
+          <div
+            [style.background]="status.colour_hex"
+            style="margin-bottom: 14px; width:100%; height:150px;"
+          ></div>
+          <h3>{{status.colour_name}}</h3>
+          <ul class="list-panel">
+            <li>{{status.colour_hex}}</li>
+            <li>{{status.colour_rgb}}</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

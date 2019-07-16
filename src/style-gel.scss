@@ -1,0 +1,159 @@
+@import './skin.scss';
+
+.menu-item:hover{
+  color:$ez-gel-gr;
+}
+.menu-item.active{
+  font-size:14px;
+  background:linear-gradient(to right, #de6262, #ffb88c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.dropdown-item:hover{
+  color:$ez-gel-gr;
+}
+
+.dropdown-item.active{
+  color:$ez-gel-gr;
+}
+
+
+.drawer-item:hover{
+  color: $ez-gel-gr;
+}
+
+.drawer-item:hover,.drawer-item.active{
+  color: $ez-gel-gr;
+}
+
+.sidebrand{
+  background: $ez-gel-gr !important;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.btn-primary{
+  background:linear-gradient(to right top, #1a4a90, #0069a9, #008296, #00955e, #57a000) !important;
+  border:solid thin $ez-gel-gr;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%) !important;
+ }
+
+
+ .ez-btn:hover {  
+  color:$ez-dark-blue !important;
+}
+
+ .btn-primary:hover{
+  background-color:$ez-dark-blue !important;
+  color:white !important;
+ }
+
+ .btn-menu:hover{
+  color:$ez-dark-blue !important;
+ }
+
+ .btn-menu:hover .btn-basic{
+  color:$ez-dark-blue ;
+ }
+
+ .btn-menu:hover  .btn-primary{
+  background-color:$ez-dark-blue !important;
+ }
+
+ 
+ .btn-secondary{
+  color:$ez-gel-gr !important;
+  border:solid thin $ez-gel-gr !important;
+}
+
+.ot,.ct{
+  color:$ez-gel-gr;
+}
+
+.tab-item:hover{
+  color: $ez-gel-gr;
+
+}
+
+.tab-item.active{
+  border-color: $ez-gel-gr;
+
+}
+
+.checkmark:after {
+
+  color: $ez-gel-gr;
+
+}
+
+.radiomark:after {
+  
+
+  color: $ez-gel-gr;
+
+}
+/*On mouse-over, add a grey background color */
+.input-check:hover input ~ .checkmark {
+
+  outline:solid 1px $ez-gel-gr;
+}
+
+/* On mouse-over, add a grey background color */
+.input-check:hover input ~ .radiomark {
+  border:solid 1px $ez-gel-gr;
+  border-radius:50%;
+
+}
+
+.input-field:focus{
+  border: solid 1px $ez-gel-gr !important;
+outline:none;
+}
+
+.text-link{
+  color: $ez-link-blue;
+}
+.text-link:hover{
+  color:$ez-dark-blue;
+}
+
+.table-ctn thead{
+  background: $ez-gel-gr;
+  border:solid thin $ez-gel-gr;
+}
+
+.table-ctn .selected{
+  background: $ez-light-blue;
+  border:solid thin $ez-gel-gr;
+}
+.table-ctn .selected:hover{
+  background: $ez-light-blue;
+  border:solid thin $ez-gel-gr;
+}
+
+.pgn-panel .active{
+  background:$ez-gel-gr;
+  border: solid thin $ez-gel-gr !important;
+  color: white;
+}
+
+.picker{
+  background:linear-gradient(to right, #de6262, #ffb88c); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Show the checkmark when checked */
+.input-check input:checked ~ .checkmark {
+  border: solid 1px $ez-gel-gr !important;
+}
+
+.input-check input:checked ~ .radiomark {
+  border: solid 1px $ez-gel-gr !important;
+}
+
+.pgn-item{
+  color: $ez-gel-gr;
+}

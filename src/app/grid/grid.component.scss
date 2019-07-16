@@ -1,0 +1,16 @@
+//Responsive grid
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+
+
+
+.grid-ctn-end{
+  justify-content: end;
+}
+
+:host(grid-ctn-end){
+  justify-content: end;
+}

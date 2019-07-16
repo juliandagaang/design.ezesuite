@@ -1,0 +1,153 @@
+@import './skin.scss';
+
+.menu-item:hover{
+  color:$ez-purple;
+}
+.menu-item.active{
+  color:$ez-purple;
+}
+
+
+.dropdown-item:hover{
+  color:$ez-purple;
+}
+
+.dropdown-item.active{
+  color:$ez-purple;
+}
+
+
+.drawer-item:hover{
+  color: $ez-purple;
+}
+
+.drawer-item:hover,.drawer-item.active{
+  color: $ez-purple;
+}
+
+.sidebrand{
+  background: $ez-purple !important;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.btn-primary{
+  background-color:$ez-purple !important;
+  border:solid thin $ez-purple;
+  //background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%) !important;
+ }
+
+
+ .ez-btn:hover {  
+  color:$ez-dark-purple !important;
+}
+
+ .btn-primary:hover{
+  background-color:$ez-dark-purple !important;
+  color:white !important;
+ }
+
+ .btn-menu:hover{
+  color:$ez-dark-purple !important;
+ }
+
+ .btn-menu:hover .btn-basic{
+  color:$ez-dark-purple ;
+ }
+
+ .btn-menu:hover  .btn-primary{
+  background-color:$ez-dark-purple !important;
+ }
+
+ 
+ .btn-secondary{
+  color:$ez-purple !important;
+  border:solid thin $ez-purple !important;
+}
+
+.ot,.ct{
+  color:$ez-purple;
+}
+
+.tab-item:hover{
+  color: $ez-purple;
+
+}
+
+.tab-item.active{
+  border-color: $ez-purple;
+
+}
+
+.checkmark:after {
+
+  color: $ez-purple;
+
+}
+
+.radiomark:after {
+  
+
+  color: $ez-purple;
+
+}
+/*On mouse-over, add a grey background color */
+.input-check:hover input ~ .checkmark {
+
+  outline:solid 1px $ez-purple;
+}
+
+/* On mouse-over, add a grey background color */
+.input-check:hover input ~ .radiomark {
+  border:solid 1px $ez-purple;
+  border-radius:50%;
+
+}
+
+.input-field:focus{
+  border: solid 1px $ez-purple !important;
+outline:none;
+}
+
+.text-link{
+  color: $ez-link-purple;
+}
+.text-link:hover{
+  color:$ez-dark-purple;
+}
+
+.table-ctn th{
+  background: $ez-purple;
+  border:solid thin $ez-purple;
+}
+
+.table-ctn .selected{
+  background: $ez-light-purple;
+  border:solid thin $ez-purple;
+}
+.table-ctn .selected:hover{
+  background: $ez-light-purple;
+  border:solid thin $ez-purple;
+}
+
+.pgn-panel .active{
+  background:$ez-purple;
+  border: solid thin $ez-purple !important;
+  color: white;
+}
+
+.picker{
+  color:$ez-purple;
+}
+
+/* Show the checkmark when checked */
+.input-check input:checked ~ .checkmark {
+  border: solid 1px $ez-purple !important;
+}
+
+.input-check input:checked ~ .radiomark {
+  border: solid 1px $ez-purple !important;
+}
+
+.pgn-item{
+  color: $ez-purple;
+}

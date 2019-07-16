@@ -1,0 +1,7 @@
+<a class="drawer-head" (click)="expand = !expand" [class.active]="!expand">
+  {{title}}
+</a>
+
+<div class="drawer-panel" *ngIf="!expand">
+  <ng-content></ng-content>
+</div>
